@@ -16,7 +16,7 @@ class TradeType(Enum):
     CRYPTO_FUTURES = "crypto futures"
     STOCK = "stock"
     FOREX = "forex"
-    INDICES_FUTURES = "indices futures"
+    INDICES_FUTURES = "futures"
 
 tradeType = list(TradeType)
 type_list = [trade_type.value for trade_type in tradeType]

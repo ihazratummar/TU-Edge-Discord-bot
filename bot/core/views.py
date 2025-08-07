@@ -1,5 +1,7 @@
 import discord.ui
 
+from bot.core.models.button_schema import ButtonSchema
+
 
 class GenericView(discord.ui.View):
     def __init__(self):
@@ -27,3 +29,17 @@ class GenericView(discord.ui.View):
         if callback:
             select.callback = callback
         self.add_item(select)
+
+    def add_buttons(self, buttons: list[ButtonSchema]):
+        for button_data in buttons:
+            button = discord.ui.Button(
+                label=button_data.label,
+                style=button_data.style,
+                emoji=button_data.emoji,
+                custom_id=button_data.custom_id or f"button_{id(self)}",
+                disabled=button_data.disabled
+            )
+            if button_data.callback:
+                button.callback = button_data.callback
+
+            self.add_item(button)

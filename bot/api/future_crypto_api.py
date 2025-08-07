@@ -10,7 +10,6 @@ async def future_crypto_api(symbol: str):
         async with aiohttp.ClientSession() as client:
             async with client.get(url) as response:
                 raw_data = await response.json()
-                print(raw_data)
                 data = {
                     "symbol": raw_data.get("symbol", "N/A"),
                     "current_price": float(raw_data.get("lastPrice", 0)),

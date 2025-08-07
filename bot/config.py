@@ -5,7 +5,8 @@ from bot.core.constant import DbConstant
 from bot import MONGO_CLIENT
 
 extensions = [
-    "bot.cogs.watchlist"
+    "bot.cogs.watchlist",
+    "bot.cogs.market"
 ]
 
 class Bot(commands.Bot):

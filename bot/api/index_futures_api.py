@@ -1,3 +1,4 @@
+import asyncio
 import logging
 from typing import Optional
 
@@ -30,7 +31,7 @@ async def get_index_futures_data(symbol: str) -> Optional[dict]:
         logging.error(f"HTTPError for symbol {symbol}: {e}")
         return {"error": "Invalid symbol"}
 
-# info = asyncio.run(get_index_futures_data("NIY=F"))
+# info = asyncio.run(get_index_futures_data("nq=f"))
 # print(info)
 
 # data = yf.Ticker("USDINR=X")

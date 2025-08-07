@@ -25,5 +25,5 @@ async def get_stock_price(symbol: str):
         return {"error": "Invalid symbol"}
 
 
-info = asyncio.run(get_stock_price("AAPL"))
-print(info)
+# info = asyncio.run(get_stock_price("AAPL"))
+# print(info)

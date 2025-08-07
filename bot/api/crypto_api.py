@@ -29,5 +29,5 @@ async def get_crypto_price(crypto_id: str, currency: str = None):
 
 
 #
-# info = asyncio.run(get_crypto_price("binancecoin", "usdt"))
+# info = asyncio.run(get_crypto_price("binancecoin", "usd"))
 # print(info)
